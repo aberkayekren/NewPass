@@ -4,7 +4,8 @@ Size istediğiniz güçlü şifreyi oluşturma ve kullanma kolaylığını sunan
 
 NewPass 8 ila 50 karakter arasında üretebildiğiniz, numara ve sembol olma durumunu seçebildiğiniz bir şifre üreticisidir. Aynı zamanda şifrenizi kopyalayabilir ve kendine has koyu-mod özelliği ile eklentinizi özelleştirebilirsiniz.
 
-# 
+## <a href="https://chrome.google.com/webstore/detail/newpass-password-generato/galgdhkpdofiaefhpoohcfnchameakon?hl=tr">Eklentiyi Chrome'da Kullanmak için Tıklayınız.</a>
+
 
 ## Eklenti Görüntüleri
 ![](https://lh3.googleusercontent.com/vuydH8KuuL3MYJNsxUw9CQA-r4d380Icq4LcSHPOqy8OJ502oeiLievl6r_PwujC3EjYnc-Mo8sih9aLQRc3uIfw0t4=w640-h400-e365-rj-sc0x00ffffff)
@@ -14,3 +15,5 @@ NewPass 8 ila 50 karakter arasında üretebildiğiniz, numara ve sembol olma dur
 #
 
 Kodları elimden geldiğince anlaşılır yazmaya çalıştım. Umarım faydalı bir repo olmuştur 🤓.
+</br>
+Mini-Not: manifest.json dosyası her chrome eklentisinde olması gereken bir dosyadır.
