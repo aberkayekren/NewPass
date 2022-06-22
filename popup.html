@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        border: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        outline: 0;
+        text-decoration: none;
+      }
+      body{
+        color: black;
+        transition: 500ms all;
+        fill: black;
+        background-color: white;
+        max-width: max-content;
+        max-height: max-content;
+      }
+      .dark{
+        background-color: rgb(54,54,54);
+        color: white;
+        fill: white;
+      }
+      .container{
+        border-radius: 1px;
+        border: solid 2px #909090;
+        padding: 20px;
+        width: 440px;
+        height: 290px;
+        background-color: white;
+      }
+      .dark .container{
+        background-color: rgb(36, 36, 36);
+      }
+      .content{
+        margin-top: 15px;
+      }
+      .header{
+        color: rgb(70, 118, 240);
+        font-size: x-large;
+        font-family: 'Fascinate', cursive !important;
+      }
+      .dark .header{
+        color:rgb(44, 77, 162);
+      }
+      .line{
+        border: rgb(189, 189, 189) solid 1px;
+        margin-top: 10px;
+      }
+      .dark .line{
+        border: rgb(228, 228, 228) solid 1px;
+      }
+      .radioCont{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      #txtPassword{
+        border: rgb(189, 189, 189) solid 1px;
+        border-radius: 5px;
+        width: 90%;
+        font-size: 16px;
+        font-weight:lighter;
+        padding: 5px;
+      }
+      .dark #txtPassword{
+        border: rgb(228, 228, 228) solid 1px;
+        color: white;
+        background-color: rgb(36, 36, 36);
+      }
+      #copyButton{
+        background-color: transparent;
+        position: relative;
+        top: 3px;
+        z-index: 1;
+      }
+      #createPassword{
+        background-color: rgb(70, 118, 240);
+        width: 100%;
+        color: white;
+        padding: 10px; 
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: 300ms all;
+      }
+      #createPassword:hover{
+        background-color: rgb(39, 85, 203);
+      }
+      .dark #createPassword{
+        background-color: rgb(44, 77, 162);
+      }
+      .dark #createPassword:hover{
+        background-color: rgb(22, 45, 102);
+      }
+      form svg{
+        padding-top: 5px;
+        fill: black;
+      }
+      .dark svg{
+        fill: white;
+      }
+      .modeControl{
+        position: relative;
+        bottom: 205px;
+        left: 370px;
+      }
+      .modeControl input{
+        position: absolute;
+        opacity: 0;
+      }
+      .modeControl span:nth-of-type(2){
+        display: none;
+      }
+      .modeControl input:checked + span{
+        display: none;
+      }
+      .modeControl input:checked + span + span{
+        display: inline-block;
+      }
+      .modeControl input:not(:checked) + span + span{
+        display: none;
+      }
+
+      .modeControl input:not(:checked) + span{
+        display: inline-block;
+      }
+      .slider {
+        -webkit-appearance: none;
+        height: 2px;
+        background: dodgerblue;
+      }
+      .dark .slider{
+        background-color: rgb(34, 103, 172);
+      }
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        border: dodgerblue solid 1px;
+        border-radius: 50%;
+        background: dodgerblue;
+        cursor: pointer;
+      }
+      .dark .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        border: rgb(34, 103, 172) solid 1px;
+        border-radius: 50%;
+        background: rgb(34, 103, 172);
+        cursor: pointer;
+      }
+      .tooltiptext {
+        visibility: hidden;
+        width: 100px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -75px;
+        opacity: 0;
+        transition: 0.3s all;
+      }
+      .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: 20px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+      #madeBy{
+        position: relative; left: 226px; bottom: 10px; color: rgb(165, 165, 165);
+      }
+      #madeByLink{
+        color: dodgerblue; text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+          <div class="header">
+              NewPass
+              <div class="line"></div>
+          </div>
+          <div class="content">
+            <form>
+              <input type="text" id="txtPassword" readonly>
+                <button id="copyButton" type="button">
+                  <span class="tooltiptext" id="myTooltip">Copied!</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                </button>
+              <div class="radioCont">
+                <p style="text-align: left; margin-left: 23px;">Length: <span id="lengthText"></span></p>
+                <input type="range" min="8" max="50" value="12" class="slider" id="myRange" style="margin-right: 20px;">
+                <input id="numbers" type="checkbox" name="numbers"
+                value="Numbers">
+                <label for="numbers" style="position: relative; bottom: 3px; left: 2px;">Numbers</label>
+                <input id="symbols" style="margin-left: 20px;" type="checkbox" name="symbols" value="Symbols">
+                <label for="symbols" style="position: relative; bottom: 3px; left: 2px;">Symbols</label>
+              </div>
+              <button type="button" id="createPassword">Generate Password</button>
+            </form>
+          </div>
+          <label for="" class="modeControl">
+            <input type="checkbox" name="" id="modeBtn">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000"><rect fill="none" height="24" width="24"/><path d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg>
+            </span>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><rect fill="none" height="24" width="24"/><path d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg>
+            </span>
+          </label>
+          <p id="madeBy">Made by <a id="madeByLink" href="https://www.github.com/aberkayekren" target="_blank">aberkayekren</a></p>
+      </div>   
+    <script src="./popup.js"></script>
+    <script src="./darkTheme.js"></script>
+  </body>
+</html> 

@@ -1,0 +1,19 @@
+{
+  "name": "NewPass: Password Generator",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "We offer you the convenience of creating and using the strong password you want.",
+  "icons":{
+    "16": "./icon_128.png",
+    "32": "./icon_128.png",
+    "48": "./icon_128.png",
+    "128":"./icon_128.png"
+  },
+  "action": {
+    "default_popup": "./popup.html",
+    "default_icon": "./icon_128.png"
+  },
+  "background": {
+    "service_worker": "./background.js"
+  }
+}
