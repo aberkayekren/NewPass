@@ -2,7 +2,7 @@
 
 Size istediğiniz güçlü şifreyi oluşturma ve kullanma kolaylığını sunan bir chrome eklentisi.
 
-NewPass 8 ila 50 karakter arasında üretebildiğiniz, numara ve sembol olma durumunu seçebildiğiniz bir şifre üreticisidir. Aynı zamanda şifrenizi kopyalayabilir ve kendine has koyu-mod özelliği ile eklentinizi özelleştirebilirsiniz.
+NewPass 8 ila 50 karakter arasında üretebildiğiniz, numara ve sembol olma durumunu seçebildiğiniz bir şifre üreticisidir. Aynı zamanda şifrenizi kopyalayabilir ve koyu-mod özelliği ile eklentinizi özelleştirebilirsiniz.
 
 ## <a href="https://chrome.google.com/webstore/detail/newpass-password-generato/galgdhkpdofiaefhpoohcfnchameakon?hl=tr">Eklentiyi Chrome'da Kullanmak için Tıklayınız.</a>
 
